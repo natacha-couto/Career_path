@@ -3,154 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natacha Couto, PhD | CV & Research Network</title>
+    <title>Dr. Natacha Couto | Academic Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         :root {
-            --primary: #2c3e50;
+            --primary: #1a2a3a;
             --accent: #3498db;
-            --sidebar-bg: #1a252f;
+            --bg: #f5f7fa;
             --white: #ffffff;
-            --text-main: #333;
+            --sidebar-width: 300px;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, sans-serif; line-height: 1.6; color: var(--text-main); margin: 0; background: #f4f7f6; }
-        .cv-container { max-width: 1200px; margin: 20px auto; background: var(--white); display: flex; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; background: var(--bg); display: flex; color: #333; }
         
-        /* Sidebar Styling */
-        .sidebar { width: 30%; background: var(--sidebar-bg); color: #fff; padding: 40px 25px; }
-        .sidebar h1 { font-size: 24px; color: var(--accent); margin: 0 0 5px 0; }
-        .sidebar h2 { font-size: 14px; font-weight: 300; margin-bottom: 30px; opacity: 0.9; }
-        .sidebar-section { margin-bottom: 30px; }
-        .sidebar-section h3 { font-size: 14px; text-transform: uppercase; border-left: 3px solid var(--accent); padding-left: 10px; margin-bottom: 15px; color: var(--accent); letter-spacing: 1px; }
-        .contact-info { font-size: 13px; margin-bottom: 12px; display: block; color: #bdc3c7; text-decoration: none; }
-        .contact-info i { width: 20px; color: var(--accent); }
-
-        /* Main Content Styling */
-        .main-content { width: 70%; padding: 40px 50px; }
-        .header-actions { display: flex; justify-content: flex-end; margin-bottom: 20px; }
-        .btn-download { background: var(--accent); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 14px; font-weight: bold; transition: 0.3s; }
-        .btn-download:hover { background: #2980b9; }
-
-        .narrative { font-style: italic; background: #f8f9fa; padding: 25px; border-left: 5px solid var(--accent); margin-bottom: 35px; border-radius: 0 4px 4px 0; }
+        .sidebar { width: var(--sidebar-width); height: 100vh; background: var(--primary); color: white; position: fixed; padding: 40px 25px; box-sizing: border-box; overflow-y: auto; display: flex; flex-direction: column; }
+        .profile-title h1 { font-size: 22px; margin: 0; color: var(--accent); }
+        .profile-title p { font-size: 13px; opacity: 0.8; margin: 5px 0 30px 0; line-height: 1.4; }
         
-        h2.section-header { font-size: 20px; color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 8px; margin-top: 40px; text-transform: uppercase; letter-spacing: 1px; }
-        
-        /* Map Styling */
-        #map { height: 400px; width: 100%; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd; z-index: 1; }
+        .nav-menu { list-style: none; padding: 0; margin: 20px 0; flex-grow: 1; }
+        .nav-item { padding: 12px 15px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; transition: 0.3s; display: flex; align-items: center; font-size: 14px; color: #bdc3c7; }
+        .nav-item i { width: 25px; }
+        .nav-item:hover, .nav-item.active { background: rgba(255,255,255,0.1); color: var(--accent); font-weight: 600; }
 
-        /* Tables & Lists */
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; }
-        th { text-align: left; background: #f8f9fa; padding: 12px; border-bottom: 2px solid #dee2e6; color: var(--primary); }
+        .main-container { margin-left: var(--sidebar-width); width: calc(100% - var(--sidebar-width)); padding: 60px; box-sizing: border-box; }
+        .content-card { background: var(--white); padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); min-height: 85vh; }
+        
+        .tab-content { display: none; animation: fadeIn 0.4s ease; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .narrative-text p { font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 20px; }
+        h2 { font-size: 24px; color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-top: 0; margin-bottom: 30px; }
+        
+        .news-item { border-left: 4px solid var(--accent); padding: 15px 20px; margin-bottom: 20px; background: #fcfcfc; border-radius: 0 8px 8px 0; }
+        .news-date { font-size: 12px; font-weight: bold; color: var(--accent); text-transform: uppercase; }
+        .news-title { font-weight: bold; display: block; margin: 5px 0; font-size: 17px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        th { text-align: left; background: #f8f9fa; padding: 12px; border-bottom: 2px solid #dee2e6; }
         td { padding: 12px; border-bottom: 1px solid #eee; }
         
-        .entry { margin-bottom: 25px; padding-left: 15px; border-left: 2px solid #eee; }
-        .entry-header { display: flex; justify-content: space-between; font-weight: bold; color: var(--primary); }
-        .entry-sub { color: var(--accent); font-size: 14px; font-weight: 600; }
+        #map { height: 500px; width: 100%; border-radius: 8px; border: 1px solid #ddd; }
 
-        .pub-item { margin-bottom: 15px; font-size: 13.5px; padding-bottom: 10px; border-bottom: 1px solid #f9f9f9; }
-        .me { font-weight: bold; text-decoration: underline; }
+        .social-links { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .social-item { display: block; color: #bdc3c7; text-decoration: none; font-size: 13px; margin-bottom: 10px; transition: 0.3s; }
+        .social-item:hover { color: var(--accent); }
+        .social-item i { width: 20px; }
 
-        @media (max-width: 900px) {
-            .cv-container { flex-direction: column; margin: 0; }
-            .sidebar, .main-content { width: 100%; }
+        @media (max-width: 1024px) {
+            body { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; position: relative; }
+            .main-container { width: 100%; margin-left: 0; padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-<div class="cv-container">
-    <aside class="sidebar">
+<aside class="sidebar">
+    <div class="profile-title">
         <h1>Natacha Couto</h1>
-        <h2>DVM, MSc, PhD, ESCMID Fellow</h2>
+        <p>DVM, MSc, PhD, ESCMID Fellow<br>Genomic Epidemiologist</p>
+    </div>
+    
+    <ul class="nav-menu">
+        <li class="nav-item active" onclick="switchTab(event, 'about')"><i class="fas fa-user"></i> Overview</li>
+        <li class="nav-item" onclick="switchTab(event, 'news')"><i class="fas fa-bullhorn"></i> News & Events</li>
+        <li class="nav-item" onclick="switchTab(event, 'collaborations')"><i class="fas fa-globe"></i> Network</li>
+        <li class="nav-item" onclick="switchTab(event, 'projects')"><i class="fas fa-flask"></i> Projects</li>
+        <li class="nav-item" onclick="switchTab(event, 'outputs')"><i class="fas fa-file-lines"></i> Publications</li>
+        <li class="nav-item" onclick="switchTab(event, 'teaching')"><i class="fas fa-users"></i> Teaching</li>
+    </ul>
+
+    <div class="social-links">
+        <a href="mailto:natachamongecouto@gmail.com" class="social-item"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://scholar.google.com/citations?user=Natacha+Couto" class="social-item" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+        <a href="https://www.linkedin.com/in/natachamongecouto/" class="social-item" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="CV_2026.pdf" class="social-item" target="_blank"><i class="fas fa-file-pdf"></i> Full CV PDF</a>
+    </div>
+</aside>
+
+<main class="main-container">
+    <div class="content-card">
         
-        <div class="sidebar-section">
-            <h3>Contact</h3>
-            <a href="mailto:natachamongecouto@gmail.com" class="contact-info"><i class="fas fa-envelope"></i> natachamongecouto@gmail.com</a>
-            <span class="contact-info"><i class="fas fa-phone"></i> +351 963 543 633</span>
-            <span class="contact-info"><i class="fas fa-globe"></i> Portuguese Nationality</span>
-            <span class="contact-info"><i class="fas fa-fingerprint"></i> Scopus: 36614104700</span>
+        <div id="about" class="tab-content active">
+            <h2>Professional Narrative</h2>
+            <div class="narrative-text">
+                <p>
+                    I am a veterinarian and genomic epidemiologist dedicated to combating <strong>Antimicrobial Resistance (AMR)</strong> through a <strong>One Health</strong> framework[cite: 3, 25, 271]. My research integrates advanced shotgun metagenomics and high-throughput sequencing to characterize multidrug-resistant pathogens and their transmission across human-animal interfaces[cite: 208, 229, 319].
+                </p>
+                <p>
+                    Currently, I serve as the <strong>Chair of the ESCMID Study Group on Epidemiological Markers (ESGEM)</strong>[cite: 39]. My career includes pivotal roles at the <strong>University of Oxford</strong>, <strong>University of Groningen</strong>, and <strong>University of Bath</strong>, alongside leading international collaborations to standardize genomic surveillance[cite: 28, 35, 140].
+                </p>
+            </div>
         </div>
 
-        <div class="sidebar-section">
-            <h3>Education</h3>
-            <p style="font-size: 13px;"><strong>PhD in Veterinary Medicine</strong><br>
-            Univ. of Lisbon (2016)<br>
-            <em>"Distinção e Louvor"</em></p>
-            <p style="font-size: 13px;"><strong>MSc in Veterinary Medicine</strong><br>
-            Univ. of Lisbon (2010)</p>
+        <div id="news" class="tab-content">
+            <h2>Upcoming Events & News</h2>
+            <div class="news-item">
+                <span class="news-date">November 4-6, 2026</span>
+                <span class="news-title">IUMS 2026 - Program Committee Member</span>
+                <p>Focusing on AI & Innovation in Microbiology, Lisbon, Portugal[cite: 36].</p>
+            </div>
+            <div class="news-item">
+                <span class="news-date">September 17-20, 2025</span>
+                <span class="news-title">IMMEM XIV - Program Committee Chair</span>
+                <p>Leading the 14th International Meeting on Microbial Epidemiological Markers in Porto[cite: 38].</p>
+            </div>
         </div>
 
-        <div class="sidebar-section">
-            <h3>Languages</h3>
-            <p style="font-size: 13px;">Portuguese (Native)<br>English (Proficient)<br>Spanish (Independent)</p>
-        </div>
-    </aside>
-
-    <main class="main-content">
-        <div class="header-actions">
-            <a href="CV_2026.pdf" class="btn-download" target="_blank"><i class="fas fa-file-pdf"></i> View Full CV PDF</a>
+        <div id="collaborations" class="tab-content">
+            <h2>Global Research Network</h2>
+            <p>Interactive visualization of research institutions and collaborators [cite: 28, 80-94, 352, 448-479].</p>
+            <div id="map"></div>
         </div>
 
-        <section class="narrative">
-            "I am a specialized researcher in One Health and genomic epidemiology, with a focus on the dynamics of antimicrobial resistance (AMR). My career bridges veterinary medicine and clinical microbiology, utilizing shotgun metagenomics to unravel the spread of multidrug-resistant pathogens across human, animal, and environmental interfaces."
-        </section>
-
-        <h2 class="section-header">Global Research Network</h2>
-        <div id="map"></div>
-
-        <h2 class="section-header">Professional Appointments</h2>
-        <div class="entry">
-            <div class="entry-header"><span>Honorary Professor</span><span>09/2025 – Present</span></div>
-            <div class="entry-sub">Cardiff Metropolitan University, UK</div>
-        </div>
-        <div class="entry">
-            <div class="entry-header"><span>Consultant</span><span>11/2025 – Present</span></div>
-            <div class="entry-sub">London School of Hygiene and Tropical Medicine, UK</div>
-        </div>
-        <div class="entry">
-            <div class="entry-header"><span>Visiting Researcher</span><span>2022 – 2025</span></div>
-            <div class="entry-sub">University of Oxford, UK</div>
+        <div id="projects" class="tab-content">
+            <h2>Grants & Funding</h2>
+            <table>
+                <thead>
+                    <tr><th>Year</th><th>Project</th><th>Funding Body</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>2022</td><td>Global Genomic Surveillance of AMR (£6.9M)</td><td>NIHR [cite: 68]</td></tr>
+                    <tr><td>2018</td><td>SECRETERS (MSCA-ITN, €4.08M)</td><td>Horizon 2020 [cite: 68]</td></tr>
+                    <tr><td>2023</td><td>Genomic Diversity of Mycoplasma pneumoniae (€180k)</td><td>ESCMID [cite: 68]</td></tr>
+                    <tr><td>2018</td><td>One Health Drivers of AMR in Thailand (£2.9M)</td><td>UKRI [cite: 68]</td></tr>
+                </tbody>
+            </table>
         </div>
 
-        <h2 class="section-header">Selected Research Funding</h2>
-        <table>
-            <tr><th>Year</th><th>Project</th><th>Funding Body</th><th>Amount</th></tr>
-            <tr><td>2022</td><td>Global Genomic Surveillance of AMR</td><td>NIHR</td><td>£6,981,201</td></tr>
-            <tr><td>2018</td><td>SECRETERS (MSCA-ITN)</td><td>Horizon 2020</td><td>€4,087,420</td></tr>
-            <tr><td>2018</td><td>One Health Drivers of AMR (Thailand)</td><td>UKRI</td><td>£2,919,177</td></tr>
-        </table>
+        <div id="outputs" class="tab-content">
+            <h2>Selected Publications</h2>
+            <div class="narrative-text">
+                <ul>
+                    <li><strong>Gibbon M, <span style="text-decoration:underline;">Couto N</span>, et al. (2025)</strong>. <em>Lancet Microbe</em>. Convergence and global epidemiology of Klebsiella pneumoniae plasmids [cite: 112-114].</li>
+                    <li><strong>David S, <span style="text-decoration:underline;">Couto N</span>, et al. (2025)</strong>. <em>PLOS Glob Public Health</em>. amr.watch – monitoring AMR trends from global genomics data [cite: 119-121].</li>
+                    <li><strong>Couto N, Rossen JW (2021)</strong>. <em>Springer Nature</em>. Overview of Microbial NGS for Clinical and Public Health Microbiology [cite: 295-297].</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2 class="section-header">Recent Publications</h2>
-        <div class="pub-item">
-            Gibbon M, <span class="me">Couto N</span>, et al. (2025). Convergence and global epidemiology of Klebsiella pneumoniae plasmids harbouring the iuc3 virulence locus. <strong>Lancet Microbe</strong>.
+        <div id="teaching" class="tab-content">
+            <h2>Mentoring & Supervision</h2>
+            <table>
+                <thead>
+                    <tr><th>Institution</th><th>Supervision Role</th><th>Student Name</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>University of Bristol</td><td>PhD Supervisor</td><td>Srikanth Srinivas [cite: 78]</td></tr>
+                    <tr><td>UMCG-RUG</td><td>Co-Promotor / Supervisor</td><td>5 PhD Candidates [cite: 78]</td></tr>
+                    <tr><td>UMCG-RUG</td><td>Supervisor</td><td>3 MSc Candidates [cite: 78]</td></tr>
+                </tbody>
+            </table>
         </div>
-        <div class="pub-item">
-            David S, <span class="me">Couto N</span>, et al. (2025). Monitoring antimicrobial resistance trends from global genomics data: amr.watch. <strong>PLOS Glob Public Health</strong>.
-        </div>
-    </main>
-</div>
+
+    </div>
+</main>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    var map = L.map('map').setView([25, 10], 2);
+    function switchTab(evt, tabName) {
+        var i, tabcontent, navitems;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("active");
+        }
+        navitems = document.getElementsByClassName("nav-item");
+        for (i = 0; i < navitems.length; i++) {
+            navitems[i].classList.remove("active");
+        }
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+
+        if(tabName === 'collaborations') {
+            setTimeout(() => { map.invalidateSize(); }, 200);
+        }
+    }
+
+    var map = L.map('map').setView([20, 0], 2);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
+        attribution: '&copy; OpenStreetMap'
     }).addTo(map);
 
     var markers = [
-        {name: "Lisbon, Portugal: PhD & Faculty of Veterinary Medicine", coords: [38.7223, -9.1393]},
-        {name: "Oxford, UK: Visiting Researcher, University of Oxford", coords: [51.7520, -1.2577]},
-        {name: "Groningen, Netherlands: Post-doc Researcher, UMCG", coords: [53.2194, 6.5665]},
-        {name: "Bath, UK: Associate Researcher, University of Bath", coords: [51.3814, -2.3585]},
-        {name: "Cardiff, UK: Honorary Professor, Cardiff Met", coords: [51.4816, -3.1791]},
-        {name: "Copenhagen, Denmark: Research Visit, Univ. of Copenhagen", coords: [55.6761, 12.5683]},
-        {name: "Bangkok, Thailand: UKRI One Health AMR Project", coords: [13.7563, 100.5018]}
+        {name: "Lisbon, Portugal: Mário Ramirez, Rafael Mamede, FMUL", coords: [38.7223, -9.1393]},
+        {name: "Porto, Portugal: Ana Freitas, Ângela Novais, FFUP", coords: [41.1579, -8.6291]},
+        {name: "Oxford, UK: David Aanensen, Sophia David, Nabil-Fareed Alikhan, Georgina Lewis-Woodhouse, Emanuelle Kumaran, Philip M Ashton, University of Oxford", coords: [51.7520, -1.2577]},
+        {name: "Groningen, Netherlands: John WA Rossen, Bhanu Sinha, Jan Maarten van Dijl, UMCG-RUG", coords: [53.2194, 6.5665]},
+        {name: "Bath, UK: Ed Feil, Marjorie Gibbon, Zam Iqbal, University of Bath", coords: [51.3814, -2.3585]},
+        {name: "Cardiff, UK: Mike Beeton, Charlotte Dixon, Cardiff Metropolitan University", coords: [51.4816, -3.1791]},
+        {name: "Copenhagen, Denmark: Luca Guardabassi, Ashnee Moodley, Lina Cavaco, University of Copenhagen, SSI, DTU", coords: [55.6761, 12.5683]},
+        {name: "Bengaluru, India: Varun Shamana, Geetha Nagaraj, Ravikumar K Lingegowda, KIMS", coords: [12.9716, 77.5946]},
+        {name: "Bogotá, Colombia: Tatiana Camacho, Angela Sofia Garcia, Pilar Donado-Gody, Agrosavia", coords: [4.6097, -74.0817]},
+        {name: "Manila, Philippines: June Gayeta, Faye Ablola, Sonia Sia, RITM", coords: [14.6, 120.9842]},
+        {name: "Ibadan, Nigeria: Abeeb Adeniyi, Joseph Adegoke, Iruka Okeke, University of Ibadan", coords: [7.3986, 3.9021]},
+        {name: "Melbourne, Australia: Jane Hawkey, Monash University", coords: [-37.8136, 144.9631]},
+        {name: "London, UK: Kathryn Holt, London School of Hygiene and Tropical Medicine", coords: [51.5074, -0.1278]},
+        {name: "Berlin, Germany: Guido Werner, Birgit Strommenger, RKI", coords: [52.5200, 13.4050]},
+        {name: "Melbourne, Australia: Sarah Baines, Torsten Seeman, benjamin P. Howden, University of Melbourne", coords: [-37.836, 144.9631]},
+        {name: "Madrid, Spain: Teresa M. Coque, Rafael Cantón, Val Lanza, Hospital Ramón y Cajal", coords: [40.4168, -3.7038]},
+        {name: "Orebro, Sweden: David Nestor, Paula Molling, Martin Sundqvist, Orebro Hospital", coords: [59.2753, 15.2134]},
+        {name: "Freiburg, Germany: Sandra Reuter, University Medical Center Freiburg", coords: [47.9990, 7.8421]},
+        {name: "Oslo, Norway: Harry Thorpe, Jukka Corander, University of Oslo", coords: [59.9139, 10.7522]}
     ];
 
-    markers.forEach(function(m) {
-        L.marker(m.coords).addTo(map).bindPopup("<b>" + m.name + "</b>");
-    });
+    markers.forEach(m => L.marker(m.coords).addTo(map).bindPopup("<b>" + m.name + "</b>"));
 </script>
 
 </body>
