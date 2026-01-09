@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Natacha Couto | Academic Portfolio</title>
+    <title>Prof. Dr. Natacha Couto | Academic Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         :root {
             --primary: #1a2a3a;
-            --accent: #3498db;
+            --accent: #acb89b;
             --bg: #f5f7fa;
             --white: #ffffff;
             --sidebar-width: 300px;
@@ -64,7 +64,6 @@
         <h1>Natacha Couto</h1>
         <p>DVM, MSc, PhD, ESCMID Fellow<br>Genomic Epidemiologist</p>
     </div>
-    
     <ul class="nav-menu">
         <li class="nav-item active" onclick="switchTab(event, 'about')"><i class="fas fa-user"></i> Overview</li>
         <li class="nav-item" onclick="switchTab(event, 'news')"><i class="fas fa-bullhorn"></i> News & Events</li>
@@ -72,12 +71,13 @@
         <li class="nav-item" onclick="switchTab(event, 'projects')"><i class="fas fa-flask"></i> Projects</li>
         <li class="nav-item" onclick="switchTab(event, 'outputs')"><i class="fas fa-file-lines"></i> Publications</li>
         <li class="nav-item" onclick="switchTab(event, 'teaching')"><i class="fas fa-users"></i> Teaching</li>
+        <li class="nav-item" onclick="switchTab(event, 'leadership')"><i class="fas fa-users"></i> Leadership</li>
     </ul>
 
     <div class="social-links">
         <a href="mailto:natachamongecouto@gmail.com" class="social-item"><i class="fas fa-envelope"></i> Email</a>
         <a href="https://scholar.google.com/citations?user=Natacha+Couto" class="social-item" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-        <a href="https://www.linkedin.com/in/natachamongecouto/" class="social-item" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.linkedin.com/in/natacha-couto-b640a2160" class="social-item" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <a href="CV_2026.pdf" class="social-item" target="_blank"><i class="fas fa-file-pdf"></i> Full CV PDF</a>
     </div>
 </aside>
@@ -89,7 +89,7 @@
             <h2>Professional Narrative</h2>
             <div class="narrative-text">
                 <p>
-                    I am a microbial genomics expert dedicated to combating <strong>Antimicrobial Resistance (AMR)</strong> through a <strong>One Health</strong> framework[cite: 3, 25, 271]. My research integrates advanced shotgun metagenomics and high-throughput sequencing to characterize multidrug-resistant pathogens and their transmission across human-animal interfaces.
+                    I am a microbial genomics expert dedicated to combating <strong>Antimicrobial Resistance (AMR)</strong> through a <strong>One Health</strong> framework. My research integrates advanced shotgun metagenomics and high-throughput sequencing to characterize multidrug-resistant pathogens and their transmission across human-animal interfaces.
                 </p>
                 <p>
                     Currently, I serve as the <strong>Chair of the ESCMID Study Group on Epidemiological Markers (ESGEM)</strong>. My career includes pivotal roles at the <strong>University of Oxford</strong>, <strong>University of Groningen</strong>, and <strong>University of Bath</strong>, alongside leading international collaborations to standardize genomic surveillance.
@@ -113,8 +113,30 @@
 
         <div id="collaborations" class="tab-content">
             <h2>Global Research Network</h2>
-            <p>Interactive visualization of research institutions and collaborators [cite: 28, 80-94, 352, 448-479].</p>
+            <p>Interactive visualization of research institutions and collaborators.</p>
             <div id="map"></div>
+            <h3 style="margin-top: 40px; font-size: 18px; color: var(--primary);">Collaborators by Institution</h3>
+            <ul style="line-height: 1.8; font-size: 14px;">
+                <li><strong>Lisbon, Portugal:</strong> Mário Ramirez, Rafael Mamede, FMUL</li>
+                <li><strong>Porto, Portugal:</strong> Ana Freitas, Ângela Novais, FFUP</li>
+                <li><strong>Oxford, UK:</strong> David Aanensen, Sophia David, Nabil-Fareed Alikhan, Georgina Lewis-Woodhouse, Emanuelle Kumaran, Philip M Ashton, University of Oxford</li>
+                <li><strong>Groningen, Netherlands:</strong> John WA Rossen, Bhanu Sinha, Jan Maarten van Dijl, UMCG-RUG</li>
+                <li><strong>Bath, UK:</strong> Ed Feil, Marjorie Gibbon, Zam Iqbal, University of Bath</li>
+                <li><strong>Cardiff, UK:</strong> Mike Beeton, Charlotte Dixon, Cardiff Metropolitan University</li>
+                <li><strong>Copenhagen, Denmark:</strong> Luca Guardabassi, Ashnee Moodley, Lina Cavaco, University of Copenhagen, SSI, DTU</li>
+                <li><strong>Bengaluru, India:</strong> Varun Shamana, Geetha Nagaraj, Ravikumar K Lingegowda, KIMS</li>
+                <li><strong>Bogotá, Colombia:</strong> Tatiana Camacho, Angela Sofia Garcia, Pilar Donado-Gody, Agrosavia</li>
+                <li><strong>Manila, Philippines:</strong> June Gayeta, Faye Ablola, Sonia Sia, RITM</li>
+                <li><strong>Ibadan, Nigeria:</strong> Abeeb Adeniyi, Joseph Adegoke, Iruka Okeke, University of Ibadan</li>
+                <li><strong>Melbourne, Australia:</strong> Jane Hawkey, Monash University</li>
+                <li><strong>London, UK:</strong> Kathryn Holt, London School of Hygiene and Tropical Medicine</li>
+                <li><strong>Berlin, Germany:</strong> Guido Werner, Birgit Strommenger, RKI</li>
+                <li><strong>Melbourne, Australia:</strong> Sarah Baines, Torsten Seeman, benjamin P. Howden, University of Melbourne</li>
+                <li><strong>Madrid, Spain:</strong> Teresa M. Coque, Rafael Cantón, Val Lanza, Hospital Ramón y Cajal</li>
+                <li><strong>Orebro, Sweden:</strong> David Nestor, Paula Molling, Martin Sundqvist, Orebro Hospital</li>
+                <li><strong>Freiburg, Germany:</strong> Sandra Reuter, University Medical Center Freiburg</li>
+                <li><strong>Oslo, Norway:</strong> Harry Thorpe, Jukka Corander, University of Oslo</li>
+            </ul>
         </div>
 
         <div id="projects" class="tab-content">
@@ -124,21 +146,91 @@
                     <tr><th>Year</th><th>Project</th><th>Funding Body</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>2022</td><td>Global Genomic Surveillance of AMR (£6.9M)</td><td>NIHR [cite: 68]</td></tr>
-                    <tr><td>2018</td><td>SECRETERS (MSCA-ITN, €4.08M)</td><td>Horizon 2020 [cite: 68]</td></tr>
-                    <tr><td>2023</td><td>Genomic Diversity of Mycoplasma pneumoniae (€180k)</td><td>ESCMID [cite: 68]</td></tr>
-                    <tr><td>2018</td><td>One Health Drivers of AMR in Thailand (£2.9M)</td><td>UKRI [cite: 68]</td></tr>
+                    <tr><td>2022</td><td>Global Genomic Surveillance of AMR (£6.9M)</td><td>NIHR </td></tr>
+                    <tr><td>2018</td><td>SECRETERS (MSCA-ITN, €4.08M)</td><td>Horizon 2020 </td></tr>
+                    <tr><td>2023</td><td>Genomic Diversity of Mycoplasma pneumoniae (€180k)</td><td>ESCMID </td></tr>
+                    <tr><td>2018</td><td>One Health Drivers of AMR in Thailand (£2.9M)</td><td>UKRI </td></tr>
                 </tbody>
             </table>
         </div>
 
         <div id="outputs" class="tab-content">
-            <h2>Selected Publications</h2>
+            <h2>Publications in peer-reviewed journals</h2>
             <div class="narrative-text">
                 <ul>
-                    <li><strong>Gibbon M, <span style="text-decoration:underline;">Couto N</span>, et al. (2025)</strong>. <em>Lancet Microbe</em>. Convergence and global epidemiology of Klebsiella pneumoniae plasmids [cite: 112-114].</li>
-                    <li><strong>David S, <span style="text-decoration:underline;">Couto N</span>, et al. (2025)</strong>. <em>PLOS Glob Public Health</em>. amr.watch – monitoring AMR trends from global genomics data [cite: 119-121].</li>
-                    <li><strong>Couto N, Rossen JW (2021)</strong>. <em>Springer Nature</em>. Overview of Microbial NGS for Clinical and Public Health Microbiology [cite: 295-297].</li>
+                    <li>Gibbon M*, <strong>Couto N*</strong>, Habib S, Cowley L, Aanensen D, Corander J, Thorpe H, Hetland MAK, Sassera D, Merla C, Corbella M, Ferrari C, Turner KME, Sirikancha K, Dulyayangkul P, Alhusein N, Charoenlap N, Thamlikitikul V, Avison MB, Feil EJ (2025). <strong>Convergence and global epidemiology of <em>Klebsiella pneumoniae</em> plasmids harbouring the <em>iuc3</em> virulence locus.</strong> Lancet Microbe, online first.</li>
+                    <li>David S*, Caballero JD*, <strong>Couto N*</strong>, Abudahab K*, Alikhan NF, Yeats C, Underwood A, Molloy A, Connor D, Shane HM, Ashton PM, Grundmann H, Holden MTG, Feil EJ, Sia SB, Donado-Godoy P, Lingegowda RK, Okeke IN, Argimón S, Aanensen DM; NIHR Global Health Research Unit on Genomics and enabling data for the Surveillance of AMR (2025). <strong>Monitoring antimicrobial resistance trends from global genomics data: amr.watch.</strong> PLOS Glob Public Health 5(11):e0005256.</li>
+                    <li>Nestor D, Peker N, <strong>Couto N</strong>, Hiss AN, Herbig A, Krause J, Rossen JWA, Mölling P, Sundqvist M (2025). <strong>Performance of shotgun metagenomics on whole blood from patients with suspected bloodstream infection: Challenges remain.</strong> Journal of Microbiological Methods 237:107231.</li>
+                    <li>Medina VA, García-Vega AS, Rodríguez F, Triviño-García ES, Robledo JA, Leal AL, Galvis JC, Reyes LF; Genomic Epidemiology of Antimicrobial Resistance Consortium (GEAR); Okeke IN, <strong>Couto N</strong>, Kumaran EA, Lewis-Woodhouse G, Argimon S, Arevalo SA, Underwood AP, Fargetton X, Aanensen DM, Donado-Godoy MP (2025). <strong>Epidemiological Genomics of <em>Klebsiella pneumoniae</em> isolates from hospitals across Colombia.</strong> NPJ Antimicrobial Resistance 3(1):64.</li>
+                    <li>Fleres G, Mirabile A, Lokate M, Rossen JWA, <strong>Couto N</strong>, Friedrich AW, García-Cobos S (2025). <strong>Surveillance and Genomic Characterisation of Colistin-Resistant Gram-Negative Bacteria in the Drains of High-Risk Hospital Units.</strong> Journal of Global Antimicrobial Resistance 42:127-134.</li>
+                    <li>Björnberg A, Nestor D, Peker N, Sinha B, <strong>Couto N</strong>, Rossen J, Sundqvist M, Mölling P (2025). <strong>Critical Steps in Shotgun Metagenomics-Based Diagnosis of Bloodstream Infections Using Nanopore Sequencing.</strong> APMIS 133(1):e13511.</li>
+                    <li>Germuskova Z, Sosa E, Lagos AC, Aamot HV, Beale MA, Bertelli C, Björkmann J, <strong>Couto N</strong>, Feige L, Greub G, Hallbäck ET, Hodcroft EB, Harmsen D, Jacob L, Jolley KA, Kahles A, Mather AE, Neher RA, Neves A, Niemann S, Nolte O, Peacock SJ, Razavi M, Roloff T, Schrenzel J, Sikora P, Sundqvist M, Mölling P, Egli A (2024). <strong>Conference report: the first bacterial genome sequencing pan-European network conference.</strong> Microbes and Infection 105410.</li>
+                    <li>Mutschler E, Roloff T, Neves A, Vangstein Aamot H, Rodriguez-Sanchez B, Ramirez M, Rossen J, <strong>Couto N</strong>, Novais Â, Howden BP, Brisse S, Reuter S, Nolte O, Egli A, Seth-Smith HMB; ESCMID Study Group for Epidemiological Markers (ESGEM), and ESCMID Study Group for Genomic and Molecular Diagnostics (ESGMD) (2024). <strong>Towards unified reporting of genome sequencing results in clinical microbiology.</strong> PeerJ 12:e17673.</li>
+                    <li>Shamanna V, Srinivas S, <strong>Couto N*</strong>, Nagaraj G, Sajankila SP, Krishnappa HG, Kumar KA, Aanensen DM, Lingegowda RK, NIHR Global Health Research Unit On Genomic Surveillance-India Consortium (2024). <strong>Geographical distribution, disease association and diversity of <em>Klebsiella pneumoniae</em> KL and O antigens in India: roadmap for vaccine development.</strong> Microbial Genomics 10(7):001271.</li>
+                    <li>Werner G, Aamot HV, <strong>Couto N</strong> (2024). <strong>Antimicrobial susceptibility prediction from genomes: a dream come true?.</strong> Trends in Microbiology 32(4):317-318.</li>
+                    <li>Werner G, <strong>Couto N</strong>, Feil EJ, Novais A, Hegstad K, Howden BP, Friedrich AW, Reuter S (2023). <strong>Taking hospital pathogen surveillance to the next level.</strong> Microbial Genomics 9(4):mgen001008.</li>
+                    <li>Habib S, Gibbon MJ, <strong>Couto N</strong>, Kakar K, Habib S, Samad A, Munir A, Fatima F, Mohsin M, Feil E (2023). <strong>The Diversity, Resistance Profiles and Plasmid Content of <em>Klebsiella </em> spp. Recovered from Dairy Farms Located around Three Cities in Pakistan.</strong> Antibiotics (Basel) 12(3):539.</li>
+                    <li>Raineri EJM, Maaß S, Wang M, Brushett S, Palma Medina LM, Sampol Escandell N, Altulea D, Raangs E, de Jong A, Vera Murguia E, Feil EJ, Friedrich AW, Buist G, Becher D, García-Cobos S, <strong>Couto N*</strong>, van Dijl JM* (2022). <strong><em>Staphylococcus aureus</em> populations from the gut and the blood are not distinguished by virulence traits-a critical role of host barrier integrity.</strong> Microbiome 10(1):239.</li>
+                    <li>Aamot HV, Claas ECJ, <strong>Couto N</strong>, Westh H, Greub G, Rossen JWA (2022). <strong>Next-generation sequencing in routine clinical microbiology and infectious diseases: an ESGMD-ESGEM ESCMID postgraduate course.</strong> New Microbes and New Infections 49-50:101046.</li>
+                    <li>Thorpe HA, Booton R, Kallonen T, Gibbon MJ, <strong>Couto N</strong>, Passet V, López-Fernández S, Rodrigues C, Matthews L, Mitchell S, Reeve R, David S, Merla C, Corbella M, Ferrari C, Comandatore F, Marone P, Brisse S, Sassera D, Corander J, Feil EJ (2022). <strong>A large-scale genomic snapshot of <em>Klebsiella</em> spp. isolates in Northern Italy reveals limited transmission between clinical and non-clinical settings.</strong> Nature Microbiology 7(12):2054-2067.</li>
+                    <li>Kok NA, Peker N, Schuele L, de Beer JL, Rossen JWA, Sinha B, <strong>Couto N*</strong> (2022). <strong>Host DNA depletion can increase the sensitivity of <em>Mycobacterium</em> spp. detection through shotgun metagenomics in sputum.</strong> Frontiers in Microbiology 13:949328.</li>
+                    <li>Cassidy H, Schuele L, Lizarazo-Forero E, <strong>Couto N</strong>, Rossen JWA, Friedrich AW, van Leer-Buter C, Niesters HGM (2022). <strong>Exploring a prolonged enterovirus C104 infection in a severely ill patient using nanopore sequencing.</strong> Virus Evolution 8(1): veab109.</li>
+                    <li>Ditz B, Boekhoudt J, <strong>Couto N</strong>, Brandsma CA, Hiemstra PS, Tew GW, Neighbors M, Grimbaldeston MA, Timens W, Kerstjens HAM, Rossen JWA, Guryev V, van den Berge M, Faiz A (2022). <strong>The Microbiome in Bronchial Biopsies from Smokers and Ex-Smokers with Stable COPD - A Metatranscriptomic Approach.</strong> COPD: Journal of Chronic Obstructive Pulmonary Disease 19(1): 81-87.</li>
+                    <li>Schuele L, Cassidy H, Peker N, Rossen JWA, </strong>Couto N*</strong> (2021). <strong>Future potential of metagenomics in clinical microbiology laboratories.</strong> Expert Review on Molecular Diagnostics 21(12): 1273-1285.</li>
+                    <li>Peker N, Schuele L, Kok N, Terrazos M, Neuenschwander SM, de Beer J, Akkerman O, Peter S, Ramette A, Merker M, Niemann S, </strong>Couto N*</strong>, Sinha B, Rossen JWA (2021). <strong>Evaluation of whole-genome sequence data analysis approaches for short- and long-read sequencing of <em>Mycobacterium tuberculosis</em>.</strong> Microbial Genomics 7(11): 000695.</li>
+                    <li>Lisotto P, Raangs E, <strong>Couto N</strong>, Rosema S, Lokate M, Zhou X, Harmsen HJM, Friedrich AW, Rossen JWA, Bathoorn E, Chlebowicz-Fliss M (2021). <strong>Long-read sequencing-based in silico phage typing of vancomycin-resistant <em>Enterococcus faecium</em>.</strong> BMC Genomics 22(1):758.</li>
+                    <li>Lisotto P, <strong>Couto N</strong>, Rosema S, Lokate M, Zhou X, Bathoorn E, Harmsen HJM, Friedrich AW, Rossen JWA, Chlebowicz-Fliss M (2021). <strong>Molecular characterisation of vancomycin-resistant <em>Enterococcus faecium</em> isolates belonging to the lineage ST117/CT24 causing hospital outbreaks.</strong> Frontiers in Microbiology 12:728356.</li>
+                    <li>Schuele L, Lizarazo-Forero E, Strutzberg-Minder K, Schütze S, Löbert S, Lambrecht C, Harlizius J, Friedrich AW, Peter S, Rossen JWA, <strong>Couto N*</strong> (2021). <strong>Application of shotgun metagenomics sequencing and targeted sequence capture to detect circulating porcine viruses in the Dutch-German border region.</strong> Transboundary and Emerging Diseases 69(4):2306-2319.</li>
+                    <li>Schuele L, Lizarazo-Forero E, Cassidy H, Strutzberg-Minder K, Boehmer J, Schuetze S, Loebert S, Lambrecht C, Harlizius J, Friedrich AW, Peter S, Rossen JWA, <strong>Couto N*</strong> (2021). <strong>First detection of porcine respirovirus 1 in Germany and the Netherlands.</strong> Transboundary and Emerging Diseases 68(6):3120-3125.</li>
+                    <li>de Vries JJC, Brown JR, <strong>Couto N</strong>, Beer M, Le Mercier P, Sidorov I, Papa A, Fischer N, Oude Munnink BB, Rodriquez C, Zaheri M, Sayiner A, Hönemann M, Cataluna AP, Carbo EC, Bachofen C, Kubacki J, Schmitz D, Tsioka K, Matamoros S, Höper D, Hernandez M, Puchhammer-Stöckl E, Lebrand A, Huber M, Simmonds P, Claas ECJ, López-Labrador FX; ESCV Network on Next-Generation Sequencing (2021). <strong>Recommendations for the introduction of metagenomic next-generation sequencing in clinical virology, part II: bioinformatic analysis and reporting.</strong> Journal of Clinical Virology 138:104812.</li>
+                    <li>Gibbon MJ, <strong>Couto N</strong>, David S, Barden R, Standerwick R, Jagadeesan K, Birkwood H, Dulyayangkul P, Avison MB, Kannan A, Kibbey D, Craft T, Habib S, Thorpe HA, Corander J, Kasprzyk-Hordern B, Feil EJ (2021). <strong>A high prevalence of <em>bla</em>OXA-48 in <em>Klebsiella (Raoultella) ornithinolytica</em> and related species in hospital wastewater in South West England.</strong> Microbial Genomics 7(3):mgen000509.</li>
+                    <li>López-Labrador FX, Brown JR, Fischer N, Harvala H, Van Boheemen S, Cinek O, Sayiner A, Madsen TV, Auvinen E, Kufner V, Huber M, Rodriguez C, Jonges M, Hönemann M, Susi P, Sousa H, Klapper PE, Pérez-Cataluňa A, Hernandez M, Molenkamp R, der Hoek LV, Schuurman R, <strong>Couto N</strong>, Leuzinger K, Simmonds P, Beer M, Höper D, Kamminga S, Feltkamp MCW, Rodríguez-Díaz J, Keyaerts E, Nielsen XC, Puchhammer-Stöckl E, Kroes ACM, Buesa J, Breuer J, Claas ECJ, de Vries JJC; ESCV Network on Next-Generation Sequencing (2021). <strong>Recommendations for the introduction of metagenomic high-throughput sequencing in clinical virology, part I: Wet lab procedure.</strong> Journal of Clinical Virology 134:104691.</li>
+                    <li>Schuele L, Cassidy H, Lizarazo E, Strutzberg-Minder K, Schuetze S, Loebert S, Lambrecht C, Harlizius J, Friedrich AW, Peter S, Niesters HGM, Rossen JWA, <strong>Couto N*</strong> (2020). <strong>Assessment of Viral Targeted Sequence Capture Using Nanopore Sequencing Directly from Clinical Samples.</strong> Viruses 12(12):1358.</li>
+                    <li>da Cruz Campos AC, <strong>Couto N</strong>, Andrade NLS, Friedrich AW, Rosa ACP, Damasco PV, Chlebowicz-Flissikowska MA, Rossen JWA, the SOLIDNESS Working Group (2020). <strong>Virulence and resistance properties of <em>E. coli</em> isolated from urine samples of hospitalized patients in Rio de Janeiro, Brazil – The role of mobile genetic elements.</strong> International Journal of Medical Microbiology 310(8):151453.</li>
+                    <li>da Cruz Campos AC, Andrade NL, <strong>Couto N</strong>, Mutters N, de Vos M, Rosa ACP, Damasco PV, Lo Ten Foe JR, Friedrich AW, Chlebowicz-Flissikowska MA, Rossen JWA (2020). <strong>Characterization of fosfomycin heteroresistance among multidrug-resistant <em>Escherichia coli</em> isolates from hospitalized patients in Rio de Janeiro, Brazil.</strong> Journal of Global Antimicrobial Resistance 22:584-593.</li>
+                    <li>Benulič K, Pirš M, <strong>Couto N</strong>, Chlebowicz M, Rossen JWA, Zorec TM, Seme K, Poljak M, Zupanc TL, Ružić-Sabljić E, Cerar T (2020). <strong>Whole genome sequencing characterization of Slovenian carbapenem-resistant <em>Klebsiella pneumoniae</em>, including OXA-48 and NDM-1 producing outbreak isolates.</strong> PLoS ONE 15(4):e0231503.</li>
+                    <li>Mendes CI, Lizarazo E, Machado MP, Silva DN, Tami A, Ramirez M, <strong>Couto N</strong>, Rossen JWA, Carriço JA (2020). DEN-IM: dengue virus genotyping from amplicon and shotgun metagenomic sequencing.</strong> Microbial Genomics 6(3):e000328.</li>
+                    <li>da Cruz Campos AC, Cavallo FM, Andrade NL, van Dijl JM, <strong>Couto N</strong>, Zrimec J, Lo Ten Foe JR, Rosa ACP, Damasco PV, Friedrich AW, Chlebowicz-Flissikowska MA, Rossen JWA (2019). Determining the virulence properties of <em>Escherichia coli</em> ST131 containing bacteriocin-encoding plasmids using short-and long-read sequencing and comparing them with those of other E. coli lineages.</strong> Microorganisms 7(11):534.</li>
+                    <li>Trigo da Roza F, <strong>Couto N</strong>, Carneiro C, Cunha E, Rosa T, Magalhães M, Tavares L, Novais A, Peixe L, Rossen JW, Lamas L, Oliveira M (2019). Commonality of multidrug-resistant <em>Klebsiella pneumoniae</em> ST348 isolates in horses and humans in Portugal.</strong> Frontiers in Microbiology 10:165.</li>
+                    <li>Lizarazo E, <strong>Couto N</strong>, Vincenti-Gonzalez M, Raangs EC, Velasco Z, Bethencourt S, Jaenisch T, Friedrich AW, Tami A, Rossen JW (2019). Applied shotgun metagenomics approach for the genetic characterization of dengue viruses.</strong> Journal of Biotechnology: X 2: 100009.</li>
+                    <li>Peker N, Garcia-Croes S, Dijkhuizen B, Wiersma HH, van Zanten E, Wisselink G, Friedrich AW, Kooistra-Smid M, Sinha B, Rossen JW, </strong>Couto N*</strong> (2019). A comparison of three different bioinformatics analyses of the 16S-23S rRNA encoding region for bacterial identification.</strong> Frontiers in Microbiology 10:620.</li>
+                    <li><strong>Couto N*</strong>, Schuele L, Raangs EC, Machado MP, Mendes CI, Jesus TF, Chlebowicz M, Rosema S, Ramirez M, Carriço JA, Autenrieth IB, Friedrich AW, Peter S, Rossen JW (2018). Critical steps in clinical shotgun metagenomics for the concomitant detection and typing of microbial pathogens.</strong> Scientific Reports 8(1):13767.</li>
+                    <li>Zhou X, Chlebowicz MA, Bathoorn E, Rosema S, <strong>Couto N</strong>, Lokate M, Arends JP, Friedrich AW, Rossen JWA (2018). Elucidating vancomycin-resistant Enterococcus faecium outbreaks: the role of clonal spread and movement of mobile genetic elements.</strong> Journal of Antimicrobial Chemotherapy 73(12):3259-67.</li>
+                    <li>Peker N, <strong>Couto N</strong>, Sinha B, Rossen JW (2018). Diagnosis of bloodstream infections from positive blood cultures and directly from blood samples: recent developments in molecular approaches.</strong> Clinical Microbiology and Infection 24(9):944-955.</li>
+                    <li>Fleres G, <strong>Couto N</strong>, Lokate M, van der Sluis LWM, Ginevra C, Jarraud S, Deurenberg RH, Rossen JW, García-Cobos S, Friedrich AW (2018). Detection of <em>Legionella anisa</em> in water from hospital dental chair units and molecular characterization by whole-genome sequencing.</strong> Microorganisms 6(3). pii: E71.</li>
+                    <li>Khemiri M, Abbassi MS, <strong>Couto N</strong>, Mansouri R, Hammami S, Pomba C (2018). <strong>Genetic characterisation of <em>Staphylococcus aureus</em> isolated from milk and nasal samples of healthy cows in Tunisia: First report of ST97-t267-agrI-SCCmecV MRSA of bovine origin in Tunisia.</strong> Journal of Global Antimicrobial Resistance 14: 161-165.</li>
+                    <li>Deurenberg RH, Bathoorn E, Chlebowicz MA, <strong>Couto N</strong>, Ferdous M, García-Cobos S, Kooistra-Smid AMD, Raangs EC, Rosema S, Veloo ACM, Zhou K, Friedrich AW, Rossen JWA (2017). <strong>Reprint of "Application of next generation sequencing in clinical microbiology and infection prevention".</strong> Journal of Biotechnology 250: 2-10.</li>
+                    <li>Deurenberg RH, Bathoorn E, Chlebowicz MA, <strong>Couto N</strong>, Ferdous M, García-Cobos S, Kooistra-Smid AMD, Raangs EC, Rosema S, Veloo ACM, Zhou K, Friedrich AW, Rossen JWA (2017). <strong>Application of next generation sequencing in clinical microbiology and infection prevention.</strong> Journal of Biotechnology 243: 16-24.</li>
+                    <li><strong>Couto N</strong>, Monchique C, Belas A, Marques C, Gama LT, Pomba C (2016). <strong>Trends and molecular mechanisms of antimicrobial resistance in clinical staphylococci isolated from companion animals over a 16-year period.</strong> Journal of Antimicrobial Chemotherapy 71: 1479-1487.</li>
+                    <li><strong>Couto N</strong>, Belas A, Oliveira M, Almeida P, Clemente C, Pomba C (2016). <strong>Comparative RNA-seq-based transcriptome analysis of the virulence characteristics of methicillin-resistant and -susceptible <em>Staphylococcus pseudintermedius</em> strains isolated from small animals.</strong> Antimicrobial Agents and Chemotherapy 60: 962-7.</li>
+                    <li><strong>Couto N</strong>, Martins J, Lourenço AM, Pomba C, Coelho AV (2016). <strong>Identification of vaccine candidate antigens of <em>Staphylococcus pseudintermedius</em> by whole proteome characterization and serological proteomic analyses.</strong> Journal of Proteomics 133: 113-24.</li>
+                    <li>Fernandes L, Centeno MM, <strong>Couto N</strong>, Nunes T, Almeida V, Alban L, Pomba C (2016). <strong>Longitudinal characterization of monophasic Salmonella Typhimurium throughout the pig's life cycle.</strong> Veterinary Microbiology 192: 231-7.</li>
+                    <li>Gaglio R, <strong>Couto N</strong>, Marques C, Lopes MFS, Moschettia G, Pomba C, Settanni L (2016). <strong>Evaluation of antimicrobial resistance and virulence of enterococci from equipment surfaces, raw materials and traditional cheeses.</strong> International Journal of Food Microbiology 236:107-114.</li>
+                    <li>Ruzauskas M, <strong>Couto N</strong>, Pavilonis A, Klimiene I, Siugzdiniene R, Virgailis M, Vaskeviciute L, Anskiene L, Pomba C (2016). <strong>Characterization of <em>Staphylococcus pseudintermedius</em> isolated from diseased dogs in Lithuania.</strong> Polish Journal of Veterinary Science 19(1): 7-14.</li>
+                    <li><strong>Couto N</strong>, Belas A, Kadlec K, Schwarz S, Pomba C (2015). <strong>Clonal diversity, virulence patterns and antimicrobial and biocide susceptibility among human, animal and environmental MRSA in Portugal.</strong> Journal of Antimicrobial Chemotherapy 70(9): 2483-7.</li>
+                    <li>Ruzauskas M, Couto N, Kerziene S, Siugzdiniene R, Klimiene I, Virgailis M, Pomba C (2015). <strong>Prevalence, species distribution and antimicrobial resistance patterns of methicillin-resistant staphylococci in Lithuanian pet animals.</strong> Acta Veterinaria Scandinava 57:27.</li>
+                    <li><strong>Couto N</strong>, Belas A, Couto I, Perreten V, Pomba C (2014). <strong>Genetic relatedness, antimicrobial and biocide susceptibility comparative analysis of methicillin-resistant and -susceptible <em>Staphylococcus pseudintermedius</em> from Portugal.</strong> Microbial Drug Resistance 20(4): 364-71.</li>
+                    <li>Pomba C, López-Cerero L, Bellido M, Serrano L, Belas A, <strong>Couto N</strong>, Cavaco-Silva P, Rodríguez-Baño J, Pascual A (2014). <strong>Within-lineage variability of ST131 <em>Escherichia coli</em> isolates from humans and companion animals in the south of Europe.</strong> Journal of Antimicrobial Chemotherapy 69(1): 271-3.</li>
+                    <li>Belas A, Salazar AS, Gama LT, <strong>Couto N</strong>, Pomba C (2014). <strong>Risk factors for faecal colonisation with <em>Escherichia coli</em> producing extended-spectrum and plasmid-mediated AmpC β-lactamases in dogs.</strong> Veterinary Record 175(8): 202.</li>
+                    <li>Ruzauskas M, <strong>Couto N</strong>, Belas A, Klimiene I, Siugzdiniene R, Pomba C (2013). <strong>First report of swine-associated methicillin-resistant <em>Staphylococcus aureus</em> ST398 in Lithuania.</strong> Polish Journal of Veterinary Sciences 16(1): 125-7.</li>
+                    <li><strong>Couto N</strong>, Belas A, Tilley P, Couto I, Gama LT, Kadlec K, Schwarz S, Pomba C (2013). <strong>Biocide and antimicrobial susceptibility of methicillin-resistant staphylococcal isolates from horses.</strong> Veterinary Microbiology 166(1-2): 299-303.</li>
+                    <li><strong>Couto N</strong>, Tilley P, Simões J, Sales Luis JP, Pomba C (2012). <strong>First Report of Methicillin-Resistant <em>Staphylococcus aureus</em> ST5 and ST398 from Purebred Lusitano Horses.</strong> Journal of Equine Veterinary Science 32(5): 300-4.</li>
+                    <li>Kadlec K, Feßler AT, <strong>Couto N</strong>, Pomba CF, Schwarz S (2012). <strong>Unusual small plasmids carrying the novel resistance genes dfrK or apmA isolated from methicillin-resistant or -susceptible staphylococci.</strong> Journal of Antimicrobial Chemotherapy 67(10): 2342-5.</li>
+                    <li><strong>Couto N</strong>, Pomba C, Moodley A, Guardabassi L (2011). <strong>Prevalence of methicillin-resistant staphylococci among dogs and cats attending a veterinary teaching hospital in Portugal.</strong> Veterinary Record 169:72.</li>
+                    <li>Kadlec K, Pomba C, <strong>Couto N</strong>, Schwarz S (2010). <strong>Small plasmids carrying vga(A) or vga(C) genes mediate resistance to lincosamides, pleuromutilins and streptogramin A antibiotics in methicillin-resistant <em>Staphylococcus aureus</em> ST398 from swine.</strong> Journal of Antimicrobial Chemotherapy 65(12): 2692-3.</li>
+                    <li>Pomba C, <strong>Couto N</strong>, Moodley A (2010). <strong>Treatment of a lower urinary tract infection in a cat caused by a multidrug-methicillin-resistant <em>Staphylococcus pseudintermedius</em> and <em>Enterococcus faecalis</em>.</strong> Journal of Feline Medicine and Surgery 12(10): 802-6.</li>
+                </ul>
+            </div>
+            <h2>Pre-prints</h2>
+            <div class="narrative-text">
+                <ul>
+                    <li>David S, Kohlenberg A, Yeats C, Abudahab K, Albiger B, Fareed-Alikhan N, Alm E, Byfors S, <strong>Couto N</strong>, Diaz-Caballero J, Giske C, Glasner C, Linkevicius M, Matuschek E, Palm D, Svartström O, Grudmann H, Struelens MJ, Wisell KT, Monnet DL, Fröding I, Aanensen D, Brolund A  (2025). Emergence of carbapenemase-producing <em>Escherichia coli</em> in acute care hospitals in 36 European countries: results from the survey of carbapenem- and/or colistin-resistant Enterobacterales (CCRE survey), 2019.</strong> Preprints with the Lancet by SSRN http://dx.doi.org/10.2139/ssrn.5275520.</li>
+                    <li>Fröding I, David S, Yeats C, Abudahab K, Albiger B, Fareed-Alikhan N, Alm E, Byfors S, <strong>Couto N</strong>, Diaz-Caballero J, Giske C, Matuschek E, Linkevicius M, Palm D, Svartström O, Struelens MJ, Wisell KT, Monnet DL, Brolund A, Aanensen D, Kohlenberg A (2025). Persistent spread of carbapenemase-producing <em>Klebsiella pneumoniae</em> in acute care hospitals in 36 European countries: results from the survey of carbapenem- and/or colistin-resistant Enterobacterales (CCRE survey), 2019.</strong> Preprints with the Lancet by SSRN http://dx.doi.org/10.2139/ssrn.5275521</li>
+                </ul>
+            </div>
+            <h2>Letters</h2>
+            <div class="narrative-text">
+                <ul>
                 </ul>
             </div>
         </div>
@@ -150,13 +242,72 @@
                     <tr><th>Institution</th><th>Supervision Role</th><th>Student Name</th><th>Link to Thesis</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>University of Bristol</td><td>MSc Supervisor</td><td>Srikanth Srinivas</td><td><a href="NA"></a></td></tr>
-                    <tr><td>UMCG-RUG</td><td>PhD Co-Supervisor</td><td>Elias Vera Murguia</td><td><a href="https://research.rug.nl/en/publications/identification-of-potential-vaccine-targets-in-livestock-associat/"></a><td></tr>
-                    <tr><td>UMCG-RUG</td><td>PhD Co-Supervisor</td><td>Nilay Peker</td><td><a href="https://research.rug.nl/en/publications/exploring-next-generation-sequencing-in-clinical-microbiology-ide/"></a></td></tr>
-                    <tr><td>UMCG-RUG</td><td>PhD Co-Supervisor</td><td>Leonard Schuele</td><td><a href="https://research.rug.nl/en/publications/application-of-next-generation-sequencing-in-microbiology-from-cl/"></a></td></tr>
-                    <tr><td>UMCG-RUG</td><td>MSc Supervisor</td><td>Siobhan Brushett</td><td><a href="NA"></a></td></tr>
+                    <tr><td>University of Bristol</td><td>MSc Co-Supervisor</td><td>Srikanth Srinivas</td><td>NA</td></tr>
+                    <tr><td>UMCG-RUG</td><td>PhD Co-Supervisor</td><td>Elias Vera Murguia</td><td><a href="https://research.rug.nl/en/publications/identification-of-potential-vaccine-targets-in-livestock-associat/" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>UMCG-RUG</td><td>PhD Co-Supervisor</td><td>Nilay Peker</td><td><a href="https://research.rug.nl/en/publications/exploring-next-generation-sequencing-in-clinical-microbiology-ide/" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>UMCG-RUG</td><td>PhD Co-Supervisor</td><td>Leonard Schuele</td><td><a href="https://research.rug.nl/en/publications/application-of-next-generation-sequencing-in-microbiology-from-cl/" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>UMCG-RUG</td><td>MSc Co-Supervisor</td><td>Siobhan Brushett</td><td>NA</td></tr>
                 </tbody>
             </table>
+        </div>
+
+        <div id="leadership" class="tab-content">
+            <h2>Leadership Roles</h2>
+            <ul>
+                <li style="list-style:none; margin: 10px 0 8px 0; font-size:20px; font-weight:700; color:#6ea8ff;">2026</li>
+                <li><strong>Chair</strong> – <a href="https://www.escmid.org/esgem/" target="_blank" rel="noopener">ESCMID Study Group on Epidemiological Markers (ESGEM)</a></li>
+                <li><strong>Local Organizing Committee Member</strong> – <a href="https://iums2026.com/?utm_source=google&utm_medium=search&utm_campaign=abstracts0312&gad_source=1&gad_campaignid=23302386708&gbraid=0AAAABBnpSc4_xIN0lC_BLFCVE-MkHpbsS&gclid=Cj0KCQiAyP3KBhD9ARIsAAJLnnbteeYWnrSODNH1e7CgbKt2B2jGQCzA_PT6zzj77OvKuNCisb5Vc74aAiqAEALw_wcB" target="_blank" rel="noopener">IUMS 2026, Beyond the Microscope: AI & Innovation in Microbiology, Lisbon, Portugal</a></li>
+                <li><strong>Coordinator</strong> – <a href="https://www.escmid.org/event-detail/tracking-plasmids-for-clinical-and-public-health-use/" target="_blank" rel="noopener">ESCMID-ESGEM-ESGMAP Postgraduate Course: Tracking plasmids for clinical and public health use, 2-4 November, Copenhagen (DK)</a></li>
+                <li><strong>Co-Lead</strong> – <a href="https://github.com/AMRverse/ESGEM-AMR" target="_blank" rel="noopener">ESGEM-AMR Working Group</a></li>
+                <li><strong>Reviewer</strong> – Nature Microbiology, Springer Nature</li>
+                <li style="list-style:none; margin: 10px 0 8px 0; font-size:20px; font-weight:700; color:#6ea8ff;">2025</li>
+                <li><strong>Chair</strong> – <a href="https://www.escmid.org/esgem/" target="_blank" rel="noopener">ESCMID Study Group on Epidemiological Markers (ESGEM)</a></li>
+                <li><strong>Coordinator</strong> – <a href="https://www.escmid-foundation.org/event-detail/enhancing-hospital-surveillance-and-rapid-diagnostics-of-critical-pathogens-through-metagenomics-sequencing/" target="_blank" rel="noopener">ESCMID-ESGEM-ESGMD Postgraduate Course:Enhancing Hospital Surveillance and Rapid Diagnostics of Critical Pathogens through Metagenomics Sequencing, 25-27 November, Groningen (NL)</a></li>
+                <li><strong>Program Committee Chair</strong> – <a href="https://www.escmid.org/congress-events/immem-xiv/" target="_blank" rel="noopener">IMMEM XIV, Microbial Typing: from Fundamental to Daily Microbiology, Porto, Portugal</a></li>
+                <li><strong>Co-Lead</strong> – <a href="https://github.com/AMRverse/ESGEM-AMR" target="_blank" rel="noopener">ESGEM-AMR Working Group</a></li>
+                <li><strong>Reviewer</strong> – National Academy of Sciences in Poland (NCN)</li>
+                <li><strong>Reviewer</strong> – UKSHA</li>
+                <li><strong>Reviewer</strong> – ESCMID</li>
+                <li><strong>Reviewer</strong> – Journal of Clinical Microbiology, ASM</li>
+                <li><strong>Reviewer</strong> – Microbial Genomics, Microbiology Society</li>
+                <li style="list-style:none; margin: 10px 0 8px 0; font-size:20px; font-weight:700; color:#6ea8ff;">2024</li>
+                <li><strong>Chair</strong> – <a href="https://www.escmid.org/esgem/" target="_blank" rel="noopener">ESCMID Study Group on Epidemiological Markers (ESGEM)</a></li>
+                <li><strong>Coordinator</strong> – ESCMID-ESGEM Postgraduate Course: Digital Epidemiology with Applications in Public Health, 16-18 July, Oxford (UK)</li>
+                <li><strong>Co-Lead</strong> – <a href="https://github.com/AMRverse/ESGEM-AMR" target="_blank" rel="noopener">ESGEM-AMR Working Group</a></li>
+                <li><strong>Expert Panellist</strong> – JPIAMR</li>
+                <li><strong>Reviewer</strong> – ESCMID</li>
+                <li style="list-style:none; margin: 10px 0 8px 0; font-size:20px; font-weight:700; color:#6ea8ff;">2023</li>
+                <li><strong>Chair</strong> – <a href="https://www.escmid.org/esgem/" target="_blank" rel="noopener">ESCMID Study Group on Epidemiological Markers (ESGEM)</a></li>
+                <li><strong>Program Committee Member</strong> –IMMEM XIII, Establishing whole genome sequencing at the core of epidemiological surveillance, Bath, UK</a></li>
+                <li><strong>Expert Panellist</strong> – JPIAMR</li>
+                <li><strong>Reviewer</strong> – MRC, UKRI</li>
+                <li><strong>Reviewer</strong> – ESCMID</li>
+                <li><strong>Reviewer</strong> – Microbiology Spectrum, ASM</li>
+                <li><strong>Reviewer</strong> – Journal of Clinical Microbiology, ASM</li>
+                <li><strong>Reviewer</strong> – Journal of Global Antimicrobial Resistance, Elsevier</li>
+                <li style="list-style:none; margin: 10px 0 8px 0; font-size:20px; font-weight:700; color:#6ea8ff;">2022</li>
+                <li><strong>Secretary</strong> – <a href="https://www.escmid.org/esgem/" target="_blank" rel="noopener">ESCMID Study Group on Epidemiological Markers (ESGEM)</a></li>
+                <li><strong>Coordinator</strong> – ESCMID-ESGEM Education Course: Moving beyond single species outbreaks: the role of mobile genetic elements, 7-8 July 2022, online</li>
+                <li><strong>Expert Panellist</strong> – National Academy of Sciences in Poland (NCN)</li>
+                <li><strong>Reviewer</strong> – ESCMID</li>
+                <li><strong>Reviewer</strong> – Microbiology Spectrum, ASM</li>
+                <li><strong>Reviewer</strong> – The Lancet Microbe, Elsevier</li>
+                <li style="list-style:none; margin: 10px 0 8px 0; font-size:20px; font-weight:700; color:#6ea8ff;">2021</li>
+                <li><strong>Secretary</strong> – <a href="https://www.escmid.org/esgem/" target="_blank" rel="noopener">ESCMID Study Group on Epidemiological Markers (ESGEM)</a></li>
+                <li><strong>Expert Panellist</strong> – National Academy of Sciences in Poland (NCN)</li>
+                <li style="list-style:none; margin: 10px 0 8px 0; font-size:20px; font-weight:700; color:#6ea8ff;">2020</li>
+                <li><strong>Secretary</strong> – <a href="https://www.escmid.org/esgem/" target="_blank" rel="noopener">ESCMID Study Group on Epidemiological Markers (ESGEM)</a></li>
+                <li><strong>Expert Panellist</strong> – National Academy of Sciences in Poland (NCN)</li>
+                <li style="list-style:none; margin: 10px 0 8px 0; font-size:20px; font-weight:700; color:#6ea8ff;">2019</li>
+                <li><strong>Secretary</strong> – <a href="https://www.escmid.org/esgem/" target="_blank" rel="noopener">ESCMID Study Group on Epidemiological Markers (ESGEM)</a></li>
+                <li><strong>Editor</strong> – Scientific Reports, Springer Nature</li>
+                <li><strong>Reviewer</strong> – Journal of Global Antimicrobial Resistance, Elsevier</li>
+                <li style="list-style:none; margin: 10px 0 8px 0; font-size:20px; font-weight:700; color:#6ea8ff;">2018</li>
+                <li><strong>Coordinator</strong> – ESCMID-ESGEM-ESGMD Capacity-Building Workshop: Metagenomics in the Diagnostic Laboratory, 21-24 October, Groningen (NL)</li>
+                <li><strong>Editor</strong> – Scientific Reports, Springer Nature</li>
+                <li><strong>Reviewer</strong> – Frontiers in Microbiology, Frontiers Media</li>
+                <li><strong>Reviewer</strong> – mSystems, ASM</li>
+            </ul>
         </div>
 
     </div>
